@@ -1,0 +1,25 @@
+[project]
+name = 'btc'
+description = ''
+authors = []
+telemetry = false
+cache_dir = './.cache'
+[[project.requirements]]
+contract_id = 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.sip-010-trait'
+[contracts.bitcoin]
+path = 'contracts/bitcoin.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.sip-10]
+path = 'contracts/sip-10.clar'
+clarity_version = 2
+epoch = 2.5
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
